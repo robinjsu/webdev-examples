@@ -8,33 +8,61 @@
   </head>
   <body>
     <main>
+      <!-- BLOCK VS INLINE ELEMENTS
+            for each input item and its label, to make them each span the width of the parent element,
+            wrap each in a <div> element-->
       <form action="#" method="post">
-        <label for="name"> Name:</label>
-        <input type="text" name="name" id="name" placeholder="Full Name" />
+        <!-- place title within form element to make it clear that it's the title for the form itself -->
+        <h1>Form</h1>
+        <div>
+          <label for="name"> Name:</label>
+          <input type="text" name="name" id="name" placeholder="Full Name" />
+        </div>
         <br />
-        <label for="email">Email</label>
-        <input type="text" name="email" id="email" placeholder="name@pdx.edu" />
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            placeholder="name@pdx.edu"
+          />
+        </div>
+        <br />
+        <!-- for group of input options use name attr. to give all buttons in group the same value -->
         <fieldset>
           <legend>Favorite Character:</legend>
-          <input type="radio" name="spongebob" />
-          <label for="spongebob">Spongebob</label>
-          <br />
-          <input type="radio" name="sandy" id="sandy" />
-          <label for="sandy">Sandy</label>
-          <br />
-          <input type="radio" name="patrick" id="patrick" />
-          <label for="patrick">Patrick</label>
+          <div>
+            <input
+              type="radio"
+              name="character"
+              id="spongebob"
+              value="spongebob"
+            />
+            <label for="spongebob">Spongebob</label>
+            <br />
+            <input type="radio" name="character" id="sandy" value="sandy" />
+            <label for="sandy">Sandy</label>
+            <br />
+            <input type="radio" name="character" id="patrick" value="patrick" />
+            <label for="patrick">Patrick</label>
+          </div>
         </fieldset>
+        <br />
         <fieldset>
           <legend>Are you a fan of the show?</legend>
-          <input type="checkbox" name="yes" id="yes" />
-          <label for="yes">Yes, I have watched all episodes!</label>
+          <input type="checkbox" name="episodes" id="op1" value="yes1" />
+          <label for="op1">Yes, I have watched all episodes!</label>
           <br />
-          <input type="checkbox" name="yes2" id="yes2" />
-          <label for="yes2">Yes, it's got the best memes.</label>
+          <input type="checkbox" name="episodes" id="op2" value="yes2" />
+          <label for="op2">Yes, it's got the best memes.</label>
         </fieldset>
-        <input type="submit" value="Submit" />
-        <input type="reset" value="Reset" />
+        <br />
+        <!-- value attr. indicates the text that appears on the input object -->
+        <div>
+          <input type="submit" value="Submit" />
+          <input type="reset" value="Reset" />
+        </div>
       </form>
     </main>
   </body>
