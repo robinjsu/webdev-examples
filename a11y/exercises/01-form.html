@@ -6,22 +6,38 @@
     <title>01 - Form</title>
   </head>
   <body>
-    <h1>Form Example</h1>
-    <form action="">
-      <span>Name</span>
-      <input type="text" />
-      <br /><br />
-      <label>
-        Email
-        <input type="text" />
-      </label>
-      <br /><br />
-      <span>Favorite Character</span>
-      <div><input type="radio" id="spongebob" />Spongebob</div>
-      <div><input type="radio" id="patrick" />Patrick</div>
-      <div><input type="radio" id="sandy" />Sandy</div>
-      <br />
-      <button>Submit</button>
-    </form>
+    <main>
+      <form action="">
+        <!-- <span>Name</span>
+            <input type="text" /> -->
+        <h1>Form Example</h1>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter Name" />
+        <br /><br />
+        <!-- check for input types! there is a type 'email'-->
+        <label for="email">
+          Email
+          <input type="email" name="email" id="email" placeholder="Email" />
+        </label>
+        <br /><br />
+        <fieldset>
+          <legend>Favorite Character</legend>
+          <input type="radio" name="character" id="spongebob" />
+          <label for="spongebob">Spongebob</label><br />
+          <input type="radio" name="character" id="patrick" />
+          <label for="patrick">Patrick</label><br />
+          <input type="radio" name="character" id="sandy" />
+          <label for="sandy">Sandy</label>
+        </fieldset>
+        <!-- <span>Favorite Character</span>
+            <div><input type="radio" id="spongebob" />Spongebob</div>
+            <div><input type="radio" id="patrick" />Patrick</div>
+            <div><input type="radio" id="sandy" />Sandy</div>  -->
+        <br />
+        <!-- <button>Submit</button> -->
+        <input type="submit" value="Submit" />
+      </form>
+    </main>
+    <!-- <h1>Form Example</h1> -->
   </body>
 </html>
