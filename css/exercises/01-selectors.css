@@ -10,12 +10,41 @@
 
 /* Use attribute selectors for the first part of the exercise */
 
-li[class] {
-  color: var(--red);
+li[class$="og"] {
+    color: var(--magenta);
+}
+
+li[id$="t"] {
+    color: var(--teal);
+}
+
+li[class^="p"] {
+    color: #008000;
+}
+
+li[class^="donkey"], li[class^="cat "] {
+    color: var(--royalblue);
 }
 
 /* Use descendant, child, and sibling selectors for the second part */
 
-section li {
-  color: var(--green);
+ol li {
+    color: green;
 }
+
+/* all general siblings of first selector */
+.first ~ li {
+    color: var(--darkmagenta);
+}
+
+/* targets first element after the first selector */
+.second + li {
+    color: var(--royalblue);
+}
+
+/* .second+li+li {
+    color: var(--darkmagenta);
+} */
+
+
+

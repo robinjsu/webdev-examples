@@ -1,6 +1,61 @@
+
+/* think about hierarchy! start from outermost elements, and work your way in */
+body {
+    margin: 0;
+}
+
+nav {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left:0;
+    width: 100%;
+    margin: 0px;
+    background-color: black;
+}
+
+nav ul { 
+    padding: 0px;
+ }
+
+nav ul li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration:underline;
+}
+
+section {
+    margin: 5px;
+}
+
+ 
+@media (max-width: 1024px) {
+    body {
+        background-color: orange;
+    }
+}
 @media (min-width: 1024px) {
   body {
     background: var(--green);
     color: var(--white);
   }
+}
+
+@media (max-width: 512px) {
+    body {
+        background-color: purple;
+        color: var(--white);
+    }
+    nav ul li {
+        display: block;
+    }
+
 }
